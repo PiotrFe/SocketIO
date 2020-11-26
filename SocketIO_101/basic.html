@@ -1,0 +1,17 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.1/socket.io.js"></script>
+
+<script>
+  const socket = io("http://localhost:8080", {
+      withCredentials: true,
+      extraHeaders: {
+          "my-custom-header": "abcd"
+      }
+  });
+
+  socket.on("connect", (data) => {
+    socket.on("welcome", (message) => {
+      console.log(message);
+    });
+    socket.emit("message", { data: "I am now a connected client!" });
+  });
+</script>
