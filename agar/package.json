@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "helmet": "^4.2.0",
-    "socketio": "^1.0.0"
+    "socketio": "^1.0.0",
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
